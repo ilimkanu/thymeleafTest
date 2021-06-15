@@ -1,0 +1,43 @@
+#h2_1 {
+color:blue;
+font-size:24px;
+}
+
+#h2_2 {
+color:red;
+font-size:24px;
+font-family:Helvetica;
+}
+
+#button{
+margin-top:20px;
+}
+
+#tr_1{
+font-family:Monaco;
+font-size:24px;
+color:green;
+}
+
+#tr_2{
+font-family:Garamond;
+font-size:24px;
+color:#1F14CE;
+}
+
+table{
+border:1px solid black;
+border-collapse:separate;
+}
+
+.button{
+  font: bold 11px Arial;
+  text-decoration: none;
+  background-color: #EEEEEE;
+  color: #333333;
+  padding: 2px 6px 2px 6px;
+  border-top: 1px solid #CCCCCC;
+  border-right: 1px solid #333333;
+  border-bottom: 1px solid #333333;
+  border-left: 1px solid #CCCCCC;
+}

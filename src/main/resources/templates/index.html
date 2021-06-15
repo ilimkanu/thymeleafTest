@@ -1,0 +1,39 @@
+<!DOCTYPE HTML>
+<html xmlns:th="http://www.thymeleaf.org">
+<header>
+    <link th:href="@{indexStyles.css}" rel="stylesheet" type="text/css">
+</header>
+<body>
+    <div th:switch="${users}">
+        <h2 id="h2_1" th:case="null" align="center">No users yet!</h2>
+        <div th:case="*">
+            <h2 id="h2_2" align="center">Users</h2>
+            <table align="center">
+                <thead>
+                <tr id="tr_1">
+                    <th>Name</th>
+                    <th>Email</th>
+                    <th>Edit</th>
+                    <th>Delete</th>
+                </tr>
+                </thead>
+                <tbody>
+                <tr id="tr_2" th:each="user : ${users}">
+                    <td th:text="${user.name}"></td>
+                    <td th:text="${user.email}"></td>
+                    <td><a class="button b_edit" th:href="@{/edit/{id}(id=${user.id})}">Edit</a></td>
+                    <td><a class="button b_delete" th:href="@{/delete/{id}(id=${user.id})}">Delete</a></td>
+                </tr>
+                </tbody>
+            </table>
+        </div>
+        <p align="center"><button id="button" onclick="location.href = '/signup';" type="button">Add a new user</button></p>
+    </div>
+</body>
+<style>
+    body {
+    background-image: url('https://image.freepik.com/free-vector/cloud-and-blue-sky-background_34645-864.jpg');
+    background-size: cover;
+    }
+</style>
+</html>
